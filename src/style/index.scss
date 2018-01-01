@@ -1,0 +1,61 @@
+@import "variables";
+
+@import "./../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "./../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "./../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+@import "./../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
+@import "./../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "./../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+@import "./../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+@import "material-fonts";
+@import "loaders";
+@import "card";
+
+body {
+  margin: 0;
+  position: relative;
+}
+
+.app {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: $body-bg;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  &-header {
+    background: $header-bg url('https://a.trellocdn.com/dist/images/header-logo-2x.01ef898811a879595cea.png') no-repeat center;
+    background-size: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 $base-px-value;
+    justify-content: flex-end;
+    .action {
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 24px;
+      cursor: pointer;
+      &:hover {
+        background: rgba(255,255,255,0.3);
+      }
+    }
+  }
+}
+
+.action {
+  transition: 0.2s all;
+}

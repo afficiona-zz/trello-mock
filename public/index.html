@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <title>Trello</title>
+  </head>
+  <body>
+    <section class="app">
+      <div class="app-header">
+        <div class="toolbar">
+          <div class="action" id="btnAddLane"><i class="mdi mdi-plus"></i></div>
+        </div>
+      </div>
+      <div class="swimlanes" id="swimLanes">
+
+        <div class="lane hide" id="dummyLane">
+          <div class="header">
+            <h2 class="title"></h2>
+            <div class="toolbar">
+              <div class="action action-delete-lane">
+                <i class="mdi mdi-delete"></i>
+              </div>
+            </div>
+          </div>
+          <div class="cards-list" draggable="true">
+            <div class="card dummy-card hide" draggable="true">
+              <h3 class="card-name"></h3>
+              <div class="action-card-delete">
+                <i class="mdi mdi-delete"></i>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="action action-create-card">
+              Add a card...
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--Task update form-->
+      <form id="cardUpdateForm" class="card-update-form" data-card="">
+        <input class="card-update-form-input" type="text">
+      </form>
+      <!--Task update form ends-->
+
+    </section>
+  </body>
+</html>
